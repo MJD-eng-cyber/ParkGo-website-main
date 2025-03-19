@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ParkGo | Find Your Spot</title>
+    <link rel="stylesheet" href="/ParkGo-website-main/ParkGo-website-main/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--reservation-->
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/smart_wizard.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/smart_wizard_theme_arrows.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/jquery.smartWizard.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .red { color: red; }
+        .green { color: green; }
+    </style>
+</head>
+<body>
+    <!-- home section starts here  -->
+    <section class="home" id="home">
+        <div class="home-box">
+            <nav>
+                <div class="logo bars">
+                    <div class="bar">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <h3>ParkGo</h3>
+                </div>
+                <div class="menu">
+                    <div class="close">
+                        <i class="fa fa-close"></i>
+                    </div>
+                    <ul>
+                        <li><a href="#home">home</a></li>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#reservation">reservation</a></li>
+                        <li><a href="#">parking status </a></li>
+                        <li><a href="#howItWorksModal">How it works</a></li>
+                    </ul>
+                </div>
+                <div class="signup-login">
+                    <a href="#">sign up</a>
+                    <a href="/ParkGo-website-main/ParkGo-website-main/pages/login.html">login</a>
+                </div>
+            </nav>
+    
+            <div class="content">
+                <h5>ParkGo</h5>
+                <h1>Park Easy, Drive Happy</h1>
+                <p>Park Smart, Drive Smarter: Your Perfect Spot Awaits!</p>
+    
+                <div class="search">
+                    <i class="fa fa-search"></i>
+                    <input type="text" placeholder="finding a place Begin with a search...">
+                    <button>search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- How it works -->
+    <div class="modal fade" id="howItWorksModal" tabindex="-1" role="dialog" aria-labelledby="howItWorksModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="howItWorksModalLabel">How It Works</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>1. Find your spot</p>
+                    <p>2. Second step explanation</p>
+                    <p>3. Park your vehicle</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript to trigger the modal -->
+    <script>
+        $(document).ready(function() {
+            $('a[href="#howItWorksModal"]').click(function(e) {
+                e.preventDefault();
+                $('#howItWorksModal').modal('show');
+            });
+        });
+    </script>
+
+    <!-- JavaScript to trigger the modal -->
+    
+    <script>
+        $(document).ready(function() {
+            $('a[href="#howItWorksModal"]').click(function(e) {
+                e.preventDefault();
+                $('#howItWorksModal').modal('show');
+            });
+        });
+    </script>
+    <!-- Why us section   -->
+    <section class="whyus" id="whyus">
+        <div class="container">
+            <div class="box box1">
+                <img src="/ParkGo-website-main/ParkGo-website-main/assets/image/security1.webp" alt="">
+                <div class="content">
+                    <h4>Security</h4>
+                    <p> Our parking service ensures the safety of your vehicle through advanced surveillance systems and secure access controls, providing peace of mind against theft</p>
+                </div>
+            </div>
+            <div class="box box2">
+                <img src="/ParkGo-website-main/ParkGo-website-main/assets/image/timesaving1.webp" alt="">
+                <div class="content">
+                    <h4>Time-Saving</h4>
+                    <p>With our smart parking system, users can quickly locate and reserve parking spots in advance, saving valuable time by eliminating the need to search for parking and reducing delays in finding a suitable spot</p>
+                </div>
+            </div>
+            <div class="box box3">
+                <img src="/ParkGo-website-main/ParkGo-website-main/assets/image/moneysaving1.webp" alt="">
+                <div class="content">
+                    <h4>Cost-Effective</h4>
+                    <p>By offering transparent pricing, competitive rates, and convenient payment options, our parking service helps users save money on parking fees and avoid fines, providing an affordable and efficient parking solution</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ***** Reservation Us Area Starts ***** -->
+    <section class="section" id="reservation">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 align-self-center">
+                    <div class="left-text-content">
+                        <div class="section-heading">
+                            <h6>Contact Us</h6>
+                            <h2>Here You Can Make A Reservation Or Just walkin to our Parking</h2>
+                        </div>
+                        <p> Do you have any questions, suggestions, or need assistance? Feel free to contact us! Our dedicated team is here to help you, whether it's for information about our services, partnership inquiries, or any other matter. Use the form below to reserve your spot or contact us directly by phone or email. We look forward to helping you make the most of our smart parking service.
+                        </p>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="phone">
+                                    <i class="fa fa-phone"></i>
+                                    <h4>Phone Numbers</h4>
+                                    <span><a href="#">080-090-0990</a><br><a href="#">080-090-0880</a></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="message">
+                                    <i class="fa fa-envelope"></i>
+                                    <h4>Emails</h4>
+                                    <span><a href="#">ParkGO@Gmail.com</a><br><a href="#">ParkGo@Gmail.com</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-form">
+                        <form id="contact" action="" method="post">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h4>Parking Reservation</h4>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <fieldset>
+                                        <input name="name" type="text" id="name" placeholder="Your Name*" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <fieldset>
+                                        <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <fieldset>
+                                        <input name="phone" type="text" id="phone" placeholder="Phone Number*" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <fieldset>
+                                        <select value="number-guests" name="number-guests" id="number-guests">
+                                            <option value="number-guests">Number Of Spots</option>
+                                            <option name="1" id="1">1</option>
+                                            <option name="2" id="2">2</option>
+                                            <option name="3" id="3">3</option>
+                                            <option name="4" id="4">4</option>
+                                            <option name="5" id="5">5</option>
+                                            <option name="6" id="6">6</option>
+                                            <option name="7" id="7">7</option>
+                                            <option name="8" id="8">8</option>
+
+                                        </select>
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div id="filterDate2">
+                                        <div class="input-group date" data-date-format="dd/mm/yyyy">
+                                            <input  name="date" id="date" type="date" class="form-control" placeholder="dd/mm/yyyy">
+                                            <div class="input-group-addon" >
+                                                <span class="glyphicon glyphicon-th"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div id="filterTime">
+                                        <div class="input-group date" data-time-format="hh:mm:ss">
+                                            <input name="time" id="time" type="time" class="form-control" placeholder="">
+                                            <div class="input-group-addon">
+                                                <span class="glyphicon glyphicon-th"></span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea>
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="main-button-icon">Make A Reservation</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Reservation Area Ends ***** -->
+    <!-- ***** About Area Starts ***** -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="left-text-content">
+                        <div class="section-heading">
+                            <h6>About Us</h6>
+                            <h2>Our Journey in Creating a Smart Parking Solution</h2>
+                        </div>
+                        <p>Our smart parking project was carried out by female students pursuing a bachelor's degree in systems information and digital transformation. We leveraged our expertise and passion for innovation to create a modern and efficient parking solution. Our goal is to provide a quality service that simplifies the lives of our users while contributing to smarter parking space management. We take pride in our work and are committed to continuously improving and developing our solution to meet the changing needs of our customers.</p>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="right-content">
+                        <div class="thumb">
+                            <img src="/ParkGo-website-main/ParkGo-website-main/assets/image/AboutUs2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** About Area Ends ***** -->
+    <!-- Start Team Member -->
+    <section class="container py-5">
+        <div class="pt-5 pb-3 d-lg-flex align-items-center gx-5">
+
+            <div class="col-lg-3">
+                <h2 class="h2 py-5 typo-space-line">Our Team</h2>
+                <p class="text-muted light-300">
+                    "Each member of our team brings their own expertise and creativity to our smart parking project. We are proud to share our solution with you and look forward to continuing to evolve our project to meet the needs of our customers."
+                </p>
+            </div>
+
+            <div class="col-lg-9 row">
+                <div class="team-member col-md-4">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="/ParkGo-website-main/ParkGo-website-main/assets/image/Ikram.jpeg" alt="Card image">
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li>Aziz Ikram </li>
+                        <li>Business Development</li>
+                    </ul>
+                </div>
+                <div class="team-member col-md-4">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="/ParkGo-website-main/ParkGo-website-main/assets/image/Marwa (2).jpeg" alt="Card image">
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li>Jaida Marwa</li>
+                        <li>Developer</li>
+                    </ul>
+                </div>
+                <div class="team-member col-md-4">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="/ParkGo-website-main/ParkGo-website-main/assets/image/Hanan.jpeg" alt="Card image">
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li>Mazyan Hanane</li>
+                        <li>Developer</li>
+                    </ul>
+                </div>
+
+                <div class="team-member col-md-4">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="/ParkGo-website-main/ParkGo-website-main/assets/image/Wissal.jpeg" alt="Card image">
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li>Hidaoui Wissal</li>
+                        <li>IT Developper</li>
+                    </ul>
+                </div>
+
+                <div class="team-member col-md-4">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="/ParkGo-website-main/ParkGo-website-main/assets/image/Chaimae.jpeg" alt="Card image">
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li>Moudnib Chaymae</li>
+                        <li>Data Engineer</li>
+                    </ul>
+                </div>
+
+                <div class="team-member col-md-4">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="/ParkGo-website-main/ParkGo-website-main/assets/image/Fsts.png" alt="Card image">
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li>Tahiry Karim</li>
+                        <li>Research Professor at the Faculty of Science and Technology in Settat</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Team Member -->
+    
+    <!--parking status-->
+    <title>Smart Parking</title>
+    <h1>Smart Parking Status</h1>
+    <table>
+        <thead>
+          <tr>
+            <th>Place Number</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td id="spot1" class="status"></td></tr>
+          <tr><td>2</td><td id="spot2" class="status"></td></tr>
+          <tr><td>3</td><td id="spot3" class="status"></td></tr>
+          <tr><td>4</td><td id="spot4" class="status"></td></tr>
+          <tr><td>5</td><td id="spot5" class="status"></td></tr>
+          <tr><td>6</td><td id="spot6" class="status"></td></tr>
+        </tbody>
+      </table>
+
+
+<!--Location status-->
+
+<section class="destinations">
+    <h4 class="label">Where you can find us </h4>
+    <div class="container">
+        <div class="container-box">
+            <h2 class="heading">
+<!--                <img src="/ParkGo-website-main/ParkGo-website-main/assets/image/underground-car-garage-entrance-mall-260nw-2261741185.webp" alt="">-->
+            </h2>
+            <div class="content">
+                <p>You can find our parking facilities in Rabat, Casablanca, and Marrakech, ensuring convenience and accessibility for our valued customers. We are excited to expand our presence and are actively exploring opportunities to serve you in even more cities. Our goal is to provide seamless experiences wherever you go, ensuring that parking is one less thing to worry about as you enjoy all that each city has to offer. Whether you're visiting for business or leisure, we look forward to welcoming you and making your parking experience hassle-free.</p>
+                <a href="#">explore more <i class="fa fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="box box1">
+                <img src="/ParkGo-website-main/ParkGo-website-main/assets/image/destinations.webp" alt="">
+                <div class="text">
+                    <h2>Centre commercial Californie, Casablanca </h2>
+                </div>
+            </div>
+            <div class="box box2">
+                <img src="/ParkGo-website-main/ParkGo-website-main/assets/image/destinations-1.png" alt="">
+                <div class="text">
+                    <h2>2 Av. Mohamed VI, Rabat </h2>
+                </div>
+            </div>
+            <div class="box box3">
+                <img src="/ParkGo-website-main/ParkGo-website-main/assets/image/destinations-2.webp" alt="">
+                <div class="text">
+                    <h2>Bd Mohamed VI, Marrakech</h2>
+                </div>
+            </div>
+    </div>
+    </div>
+</section>
+
+    <!--Feedback section -->
+    <section class="feedback">
+        <div class="container">
+            <h4 class="label">Driver's voices</h4>
+            <h2 class="heading">Driver's voices</h2>
+            <p class="paragraph">
+                real stories from our Smart Driver community
+            </p>
+        </div>
+
+        <div class="voices">
+            <div class="voice box1">
+                <div class="profile">
+                    <img src="/ParkGo-website-main/ParkGo-website-main/assets/image/photo2.jpg" alt="">
+                    <div class="detail">
+                        <li>Sarah Salih </li>
+                        <li>Driver</li>
+                    </div>
+                </div>
+                <p>"Using ParkGo has been a game-changer for me! I can easily find parking spots near my destination without the stress of searching endlessly"</p>
+            </div>
+
+            <div class="voice box3">
+                <div class="profile">
+                    <img src="/ParkGo-website-main/ParkGo-website-main/assets/image/photo3.jpg" alt="">
+                    <div class="detail">
+                        <li>Ahmed Hamid</li>
+                        <li>Driver</li>
+                    </div>
+                </div>
+                <p>"ParkGo's user-friendly platform and seamless payment process make parking in busy areas a breeze. No more circling around for spots!"</p>
+            </div>
+            <div class="voice box4">
+                <div class="profile">
+                    <img src="/ParkGo-website-main/ParkGo-website-main/assets/image/photo4.jpg" alt="">
+                    <div class="detail">
+                        <li>marvin davin</li>
+                        <li>traveler</li>
+                    </div>
+                </div>
+                <p>"The convenience of reserving parking spots in advance through ParkGo has saved me so much time and hassle. Highly recommended!"</p>
+            </div>
+            <div class="voice box5">
+                <div class="profile">
+                    <img src="/ParkGo-website-main/ParkGo-website-main/assets/image/photo5.jpg" alt="">
+                    <div class="detail">
+                        <li>Jessica James</li>
+                        <li>Visitor</li>
+                    </div>
+                </div>
+                <p>"As a frequent visitor to busy areas, ParkGo has become my go-to for hassle-free parking. It's convenient, reliable, and takes the stress out of parking"</p>
+            </div>
+            <div class="voice box6">
+                <div class="profile">
+                    <img src="/ParkGo-website-main/ParkGo-website-main/assets/image/photo6.jpg" alt="">
+                    <div class="detail">
+                        <li>Salma Ait saleh</li>
+                        <li>Visitor</li>
+                    </div>
+                </div>
+                <p>"ParkGo's customer service is top-notch! They are responsive and helpful, making my parking experience smooth and enjoyable"</p>
+            </div>
+        </div>
+    </section>
+<!--Office location Map -->
+
+    <div class="office-location">
+        <h2>Our Office Location</h2>
+        <p></p>
+        <p>Address: 12 Avenue Hassan II , Casablanca , Casablanca-Settat , Morocco</p>
+        <p>Phone: +212 756 7890</p>
+        <p>Email: Park@Go.com</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13379.879326921591!2d-7.626804745229195!3d33.03092526665025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda61aabf2a6a8b9%3A0xe6a579c28d993de9!2sFacult%C3%A9%20des%20sciences%20et%20techniques!5e0!3m2!1sen!2sin!4v1710730239139!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <!--Footer -->
+    <footer>
+        <section class="footer">
+            <div class="container">
+                <div class="detail">
+                    <h3>ParkGo</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere in, non praesentium soluta quis enim aperiam aliquam, rem totam porro, vel obcaecati modi architecto error maiores iusto quaerat aut eum.</p>
+                    <h5>get in touch</h5>
+                    <a href="#">parko.go@mail.com</a>
+                    <div class="social">
+                        <a href="#"><i class="fa fa-linkedin-square"></i></a>
+                        <a href="#"><i class="fa fa-facebook-square"></i></a>
+                        <a href="#"><i class="fa fa-twitter-square"></i></a>
+                    </div>
+                </div>
+                <div class="about-us">
+                    <h4>about us</h4>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our term</a></li>
+                    <li><a href="#">mission and values</a></li>
+                </div>
+                <div class="about-us">
+                    <h4>help</h4>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">booking guide</a></li>
+                    <li><a href="#">cancellation policy</a></li>
+                    <li><a href="#">site map</a></li>
+                </div>
+                <div class="about-us">
+                    <h4>Resources</h4>
+                    <li><a href="#">newsletter</a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">offers</a></li>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <div>
+                    &copy;2024 - ParkGo, inc, all rights reserved
+                </div>
+                <div>
+                    <a href="#">term & conditions</a>
+                    <a href="#">privacy policy</a>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+    <script src="/ParkGo-website-main/ParkGo-website-main/assets/js/script.js"></script>
+</body>
+</html>
