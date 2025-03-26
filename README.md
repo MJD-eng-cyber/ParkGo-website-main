@@ -1,27 +1,29 @@
 # Smart Parking System
 
 ## Introduction
-**Smart Parking System** est une solution intelligente qui permet aux conducteurs de réserver facilement une place de stationnement en ligne. Notre objectif est d'offrir une expérience fluide et optimisée pour éviter la perte de temps et améliorer la gestion des parkings.
+**Smart Parking System** is an intelligent solution that allows drivers to easily book a parking spot online. Our goal is to provide a seamless and optimized experience to save time and improve parking management.
 
 ## Features
-- **Réservation en ligne** pour garantir votre place à l'avance.
-- **Statut des places en temps réel** : disponible, réservée ou occupée.
-- **Sécurité et accessibilité** grâce à une authentification fiable.
-- **Dashboard utilisateur** pour gérer les réservations après connexion.
+- **Online booking** to secure your spot in advance.
+- **Real-time space status**: available, reserved, or occupied.
+- **Security and accessibility** with reliable authentication.
+- **User dashboard** to manage bookings after logging in.
 
 ## About Us
-Nous sommes une équipe de deux développeurs passionnés par les solutions technologiques innovantes.
+We are a team of two developers passionate about innovative technological solutions.
 
 ## Technologies
-Ce projet est notre premier site web utilisant **HTML, CSS et JavaScript**.
-Nous sommes une équipe de deux développeurs passionnés par les solutions technologiques innovantes.
+This project is our first website built using **HTML, CSS, and JavaScript**.  
+We are a team of two developers passionate about innovative technological solutions.
 
-## Contributor
-- https://github.com/MJD-eng-cyber
-- https://github.com/hananemazyan
+## Contributors
+- [MJD-eng-cyber](https://github.com/MJD-eng-cyber)  
+- [hananemazyan](https://github.com/hananemazyan)
 
-## Pictures 
-![Capture d'écran 2025-03-21 112650](https://github.com/user-attachments/assets/55d842f8-3847-4828-9762-32cccb7dbcd1)
+## Pictures
+![Screenshot 2025-03-21 112650](https://github.com/user-attachments/assets/55d842f8-3847-4828-9762-32cccb7dbcd1)
+
+
 
 
 
